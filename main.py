@@ -1,24 +1,14 @@
-def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
 
-def jump():
-    turn_left()
-    while wall_on_right():
-        move()
+word_list = ["ardvark", "baboon", "camel"]
 
-    turn_right()
-    move()
-    turn_right()
+import random
 
-    while front_is_clear():
-        move()
-    turn_left()
+chosen_word = random.choice(word_list)
 
-while not at_goal():
-    if wall_in_front():
-        jump()
-    else:
-        move()
+guess = input("Guess a letter: ").lower()
 
+for letter in chosen_word:
+    if letter == guess :
+        print("right")
+    else :
+        print("wrong")
