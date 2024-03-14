@@ -108,7 +108,7 @@ while not end_of_game:
   # range , for 복습
 
 
-#Step 5
+print("Step 5")
 
 import random
 
