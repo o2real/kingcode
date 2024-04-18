@@ -76,3 +76,6 @@ travel_log = [
     "total_visits" : 12
   },
 ]
+
+
+아 오늘 블로그 하느라 시간 다 날랐네
