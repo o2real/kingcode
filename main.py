@@ -41,4 +41,34 @@ days = days_in_month(year, month)
 print(days)
 
 
-#-------------------------
+#-------------------------계산기
+
+def add(n1, n2):
+  return n1 + n2
+
+def subtract(n1, n2):
+  return n1 - n2
+
+def mutiply(n1, n2):
+  return n1 * n2
+
+def divide(n1, n2):
+  return n1 / n2
+
+operations = {
+  "+" : add,
+  "-" : subtract,
+  "*" : mutiply,
+  "/" : divide,
+}
+
+num1 = input("frist number")
+num2 = input("second number")
+for  symbol in operations:
+  print(symbol)
+
+operation_symbol = input("Pick an operation form the line above: ")
+
+answer = operations[operation_symbol](int(num1),int(num2))
+
+print(f"{num1} {operation_symbol} {num2} = {answer}")
