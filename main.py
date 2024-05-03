@@ -63,18 +63,27 @@ operations = {
 }
 
 num1 = input("frist number: ")
-num2 = input("second number: ")
 for  symbol in operations:
   print(symbol)
+should_countinue = True
 
-operation_symbol = input("Pick an operation form the line above: ")
+while should_countinue :
+  operation_symbol = input("Pick an operation : ")
+  num2 = input("next number: ")
+  answer = operations[operation_symbol](int(num1),int(num2))
+  
+  print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-answer1 = operations[operation_symbol](int(num1),int(num2))
+  if input(f"Type 'y' to continue calcilating with {answer}, or type 'n' to exit.: ") == "y":
+    num1 = answer
 
-print(f"{num1} {operation_symbol} {num2} = {answer1}")
-
-operation_symbol = input("Pick another operation: ")
-num3 = int(input("next number?: "))
-answer2 = operations[operation_symbol](int(answer1),int(num3))
-
-print(f"{answer1} {operation_symbol} {num3} = {answer2}")
+  else:
+    should_countinue = False
+    
+  
+  
+  # operation_symbol = input("Pick another operation: ")
+  # num3 = int(input("next number?: "))
+  # answer2 = operations[operation_symbol](int(answer1),int(num3))
+  
+  # print(f"{answer1} {operation_symbol} {num3} = {answer2}")
